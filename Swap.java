@@ -1,19 +1,28 @@
-package java2;
-
+package javaStrings;
+import java.util.Scanner;
 public class Swap {
+	public static String swapPair(String str)
+	{
+		if(str == null || str.isEmpty())
+		{
+			return str;
+		}
+		char[] ch = str.toCharArray();
+		for(int i =0;i<ch.length-1;i += 2)
+		{
+			char temp = ch[i];
+			ch[i] = ch[i+1];
+			ch[i+1] = temp;
+		}
+		return new String(ch);
+	}
 	public static void main(String args[])
 	{
-		int a = 10; 
-		int b = 20;
-		System.out.println("Before swap");
-		System.out.println("The value of a is:"+a);
-		System.out.println("The value of b is:"+b);
-		a = a+b;
-		b = a-b;
-		a = a-b;
-		System.out.println("After swap");
-		System.out.println("The value of a is:"+a);
-		System.out.println("The value of b is:"+b);
+		System.out.println("Enter first string : ");
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		System.out.println(swapPair(str));
+		sc.close();
 	}
 
 }
