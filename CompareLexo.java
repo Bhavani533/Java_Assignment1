@@ -3,8 +3,8 @@ package javaStrings;
 public class CompareLexo {
 		public static void main(String[] args)
 	    {
-	        String s1 = "Ram";
-	        String s2 = "Ram";
+	        String s1 = "abc";
+	        String s2 = "abc";
 	        String s3 = "Shyam";
 	        String s4 = "Tejaswi";
 	  
